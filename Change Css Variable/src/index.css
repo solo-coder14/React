@@ -1,0 +1,14 @@
+:root {
+  --color: white;
+}
+
+body {
+  background-color: var(--color);
+  color: var(--color);
+}
+
+button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}

@@ -1,0 +1,11 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.card{
+    border: 2px solid black;
+    max-width: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
