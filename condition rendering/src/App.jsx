@@ -48,7 +48,7 @@ function App() {
       </div>
       {showbtn && <button>I will show this button2</button>}
       <div className="card">
-        <button onClick={() => setshowbtn(!showbtn)}>
+        <button onClick={() => setshowbtn((prev)=>{!prev})}>
           Toggle ShowButton
         </button>
 
