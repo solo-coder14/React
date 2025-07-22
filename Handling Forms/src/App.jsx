@@ -43,8 +43,15 @@ function App() {
           {/* <input {...register("username",{required: true, minLength: 3, maxLength: 8})} type="text" />
           {errors.username && <div>there are some error in username</div> } */}
 
-          <input {...register("username", { required: { value: true, message: "The field is required" }, minLength: { value: 3, message: "min length is 3" }, maxLength: { value: 8, message: "max length is 8" } })} type="text" />
-          {errors.username && <div>{errors.username.message}</div>}
+          <input {...register("username", { 
+            required: { 
+              value: true, 
+              message: "The field is required" 
+            }, 
+            minLength: { value: 3, message: "min length is 3" }, maxLength: { value: 8, message: "max length is 8" } 
+            })} 
+          type="text" />
+          {errors.username && <div className='red'>{errors.username.message}</div>}
 
           <br />
           <input {...register("password")} type="password" />
