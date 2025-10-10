@@ -2,11 +2,11 @@ import './card.css';
 import { useRef, forwardRef, useImperativeHandle } from 'react';
 
 const Card = forwardRef(({ card, h1ref }, refFromApp) => {
-  const spanRef = useRef(null);
+  const UserIDRef = useRef(null);
 
   const txtScale = () => {
-    if (spanRef.current) {
-      spanRef.current.style.fontSize = '30px';
+    if (UserIDRef.current) {
+      UserIDRef.current.style.fontSize = '30px';
     }
   };
 
@@ -17,9 +17,11 @@ const Card = forwardRef(({ card, h1ref }, refFromApp) => {
 
   return (
     <div className="card">
+      {/* Card Title */}
       <h1 ref={h1ref}>{card.title}</h1>
       <p>{card.body}</p>
-      <span ref={spanRef}>UserID: {card.userId}</span>
+      {/* UserID */}
+      <span ref={UserIDRef}>UserID: {card.userId}</span>
       <button onClick={txtScale}>Click</button>
     </div>
   );
@@ -47,7 +49,7 @@ export default Card;
 //     <div className='card'>
 //       <h1 ref={h1Ref}>{card.title}</h1>
 //       <p>{card.body}</p>
-//       <span>UserID: {card.userId}</span>
+//       <span>UserIDRef: {card.userId}</span>
 //       <button onClick={handleColorChange}>Change Color</button>
 //     </div>
 //   );
