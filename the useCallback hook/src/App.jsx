@@ -1,50 +1,22 @@
-import { useState, useCallback } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Navbar from './components/Navbar'
+import React, { useState, useCallback, memo } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
-  const [value, setValue] = useState("good")
+const Counter = memo(({ onClick }) => {
+  console.log("Child component rendered");
+  return <button onClick={onClick}>Increase</button>;
+});
 
-  // function change(){
-  //   setValue("another" + count)
-  // }
+export default function App() {
+  const [count, setCount] = useState(0);
 
-  // const change = useCallback( ()=>{
-  //   setValue("another " + count)
-  // },[])  //fre
-
-  const change = useCallback( ()=>{
-    setValue("another " + count)
-  },[count])
+  // 👇 useCallback prevents function recreation unless "count" changes
+  const handleIncrease = useCallback(() => {
+    setCount(prevCount => prevCount + 1);
+  }, []);
 
   return (
-    <>
-      <div>
-        <Navbar value={value} change={change} />
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div>
+      <h2>Count: {count}</h2>
+      <Counter onClick={handleIncrease} />
+    </div>
+  );
 }
-
-export default App

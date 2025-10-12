@@ -10,3 +10,4 @@ function ShowCount({title, count}) {
 }
 
 export default React.memo(ShowCount);
+// export default ShowCount;
