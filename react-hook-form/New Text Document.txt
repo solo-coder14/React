@@ -1,0 +1,182 @@
+I want you to generate a complete full-stack Todo List Task Management Web Application with the following requirements:
+
+🖥️ Frontend Requirements
+Tech Stack
+
+React.js with TypeScript
+
+Vite for build tool
+
+TailwindCSS (dark mode enabled)
+
+Axios for API requests
+
+React Router DOM for routing
+
+React Hook Form + Zod for validation
+
+Login & Signup pages must use strong form validation
+
+Show error messages in UI
+
+Use modern UI/UX
+
+Beautiful, modern UI/UX
+
+Mobile responsive
+
+Clean layout, glassmorphism or neumorphism allowed
+
+Animations optional with Framer Motion
+
+Frontend Pages
+
+Landing Page
+
+Hero section
+
+Feature highlights
+
+CTA buttons (Login / Signup)
+
+Signup Page
+
+Full validation using React Hook Form + Zod
+
+Fields: name, email, password, confirmPassword
+
+Show real-time validation errors
+
+Submit to backend API
+
+Login Page
+
+Validated form
+
+Fields: email, password
+
+On success → store JWT token in localStorage
+
+Dashboard
+
+Shows the list of todos
+
+User must be authenticated
+
+Show welcome message
+
+Logout button
+
+Todo Management Page
+
+Add Todo
+
+Edit Todo
+
+Delete Todo
+
+Mark as Completed
+
+Filter Todos (All, Completed, Pending)
+
+Modern UI interface
+
+Smooth animations
+
+Protected Routes
+
+Use React Router DOM
+
+If no token → redirect to login
+
+🛠️ Backend Requirements
+Tech Stack
+
+Node.js + Express.js with TypeScript
+
+Prisma ORM
+
+PostgreSQL (local database)
+
+JWT Authentication
+
+Bcrypt password hashing
+
+Express Validator for input validation
+
+Backend Features
+
+User Authentication
+
+Signup route
+
+Validate using express-validator
+
+Check if user exists
+
+Hash password using bcrypt
+
+Save user in PostgreSQL
+
+Login route
+
+Validate input
+
+Compare hashed password
+
+Return JWT token
+
+Todo CRUD
+
+Add Todo
+
+Get all Todos for user
+
+Update Todo
+
+Delete Todo
+
+Mark as complete
+
+Protected Routes
+
+Middleware to verify JWT before accessing todo routes
+
+Prisma Schema
+
+User model
+
+Todo model
+
+📁 Project Structure
+
+Generate full folder structure for both frontend and backend with proper TypeScript setup, environment files, and comments.
+
+🚀 Additional Requirements
+
+API error handling with proper HTTP status codes
+
+Loading states + error states on frontend
+
+Show toast notifications (success/error)
+
+Write clean, modular code
+
+Use best practices for file organization
+
+Use reusable components (Buttons, Input fields, Navbar, TodoItem, etc.)
+
+🎯 Goal
+
+Generate a complete codebase, including:
+
+✔ Full folder structure
+✔ All frontend code (components, pages, routes, context, hooks)
+✔ Backend API (routes, controllers, middleware, prisma schema)
+✔ Full authentication system
+✔ Todo CRUD
+✔ Validation (React + Express)
+✔ Beautiful modern UI
+✔ TypeScript everywhere
+
+DATABASE_URL="postgresql://postgres:12253609@localhost:5432/newTodo"

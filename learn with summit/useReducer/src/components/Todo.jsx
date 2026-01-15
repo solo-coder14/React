@@ -24,7 +24,7 @@ function todoReducer(state, action) {
 
 function TodoApp() {
   const [todos, dispatch] = useReducer(todoReducer, []);
-  const [input, setInput] = useState(''); 
+  const [input, setInput] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();

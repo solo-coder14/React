@@ -5,6 +5,16 @@ import Stats from "./components/Stats"
 import { decrement, increment, incrementByValue } from "./features/counters/countersSlice";
 import Posts from "./components/Posts";
 
+// const intialCounters = [
+//   {
+//     id: 1,
+//     value: 0
+//   },
+//   {
+//     id: 2,
+//     value: 0
+//   }
+// ] 
 
 
 function App() {
@@ -66,7 +76,7 @@ function App() {
       </h1>
       {
         counters.map(counter => (
-          <Counter key={counter.id} count={counter.value} onIncrement={()=>handleIncrement(counter.id)} onDecrement={()=>handleDecrement(counter.id)} incrementByValue={()=>handleIncrementByValue(counter.id)}/>
+          <Counter key={counter.id} count={counter.value} onIncrement={()=>handleIncrement(counter.id)} onDecrement={()=>handleDecrement(counter.id)} incrementByValue={()=>handleIncrementByValue(counter.id)} handlerId={counter.id} />
         ))
       }
       <Stats totalCount={totalCount}/>
