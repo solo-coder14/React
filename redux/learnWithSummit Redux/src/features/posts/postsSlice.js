@@ -31,7 +31,17 @@ const postsSlice = createSlice({
             state.isError = true;
             state.error = action.error?.message;
         });
+    },
+    reducers: {
+        show: (state, action) =>{
+            const newPosts = state.posts.slice(0, 5);
+            console.log(newPosts);
+            state.posts = newPosts;
+        }
     }
 })
+
+export const { show } = postsSlice.actions;
+
 
 export default postsSlice.reducer;

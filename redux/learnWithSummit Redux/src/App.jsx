@@ -19,7 +19,7 @@ import Posts from "./components/Posts";
 
 function App() {
   // const [counters, setCounters] = useState(initialCounters)
-  const counters = useSelector((state)=> state.counters);
+  const counters = useSelector((state) => state.counters);
   const dispatch = useDispatch();
 
   //Total count
@@ -66,7 +66,7 @@ function App() {
   return (
     <>
       <h1 className='text-center'>Simple Counter Application
-      <style jsx>
+        <style jsx>
           {`
           .text-center {
             text-align: center;
@@ -76,10 +76,10 @@ function App() {
       </h1>
       {
         counters.map(counter => (
-          <Counter key={counter.id} count={counter.value} onIncrement={()=>handleIncrement(counter.id)} onDecrement={()=>handleDecrement(counter.id)} incrementByValue={()=>handleIncrementByValue(counter.id)} handlerId={counter.id} />
+          <Counter key={counter.id} count={counter.value} onIncrement={() => handleIncrement(counter.id)} onDecrement={() => handleDecrement(counter.id)} incrementByValue={() => handleIncrementByValue(counter.id)} handlerId={counter.id} />
         ))
       }
-      <Stats totalCount={totalCount}/>
+      <Stats totalCount={totalCount} />
       <Posts />
     </>
   )
