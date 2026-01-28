@@ -19,7 +19,7 @@ function App() {
     }, 
     {
       path: "/user/:username",
-      element: <User />
+      element: <><Navbar /><User /></>
     }])
   return (
     <>

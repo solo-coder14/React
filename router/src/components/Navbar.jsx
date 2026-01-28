@@ -27,6 +27,7 @@ const Navber = () => {
         <ul>
             <li><NavLink className={(e)=>{return e.isActive? "red cap" : "" }} to="/">Home</NavLink></li>
             <li><NavLink className={(e)=>{return e.isActive? "red cap" : "" }} to="/about">About</NavLink></li>
+            <li><NavLink className={(e)=>{return e.isActive? "red cap" : "" }} to="/user/woafi">User</NavLink></li>
         </ul>
       </nav>
     </div>
